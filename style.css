@@ -20,9 +20,13 @@ main, body {
     from { --bgcolor: 0deg; }
     to { --bgcolor: 360deg; }
 }
-
+.box{
+    background-color: black;
+    width: 100%;
+    min-height:100vh;
+}
 .container {
-    border-radius: 12px;
+   
     width: fit-content;
     margin: 100px auto; /* Centered for a better look */
     color: white;
@@ -58,20 +62,53 @@ main, body {
         color: #03353d;
          animation-play-state: running;
 }
-.view2{
+.container2{
+    background-image: url(https://images.unsplash.com/photo-1772687069217-f87131603e53?q=80&w=1168&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-size: cover;
     width: 100%;
-    height: 100%;
-    background-color: black;
+    height: 100vh;
+    color: antiquewhite;
     display: flex;
     align-items: center;
     justify-content: center;
+     anchor-name: --ans-some;
+      
+}
+.card{
+ 
+    width: 200px;
+    height: 200px;
+   
+}
+.card:hover{
+    anchor-name: --ans-some;
+}
+.red{
+    background-color: rgb(61, 11, 11);
+}
+.green{
+    background-color: rgb(2, 63, 2);
+}
+.brown{
+    background-color: brown;
+}
+
+.anchor{
+    position: absolute;
+    position-anchor: --ans-some;
+    top: anchor(--ans-some top);
+    left: anchor(--ans-some left);
+    bottom: anchor(--ans-some bottom);
+    right: anchor(--ans-some right);
+    mix-blend-mode: difference;
+   background-image: url(https://images.unsplash.com/photo-1772687069217-f87131603e53?q=80&w=1168&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-size: cover;
+    transition: all 0.3s linear;
+    pointer-events: none;
+    z-index: 10;
     
 
 }
-.card{
-    background-color: aquamarine;
-    anchor-name: abc;
-}
-.anchor{
-anchor-scope: abc;
-}
+
